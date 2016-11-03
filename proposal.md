@@ -1,20 +1,8 @@
-Name: ____________           ID:   ____________
+Name: Vivek Sanghvi Jain           ID:   46902769
 
 ## Proposed Project
 
-> Replace this paragraph with the description of what your project
-> will do. Tell me what kind of interface it will have, and roughly
-> how it will work. I don't need more than three or four sentences,
-> unless you feel compelled to write more.
+I am trying to buid an ecommerce web application. Once a user purchases something, the item price( which is returned by the GenServer), increases by 10% for the next purchase. The point is to encourage users to buy early. 
 
-## Outline Structure
+I have no idea how to do it as of now. 
 
-> Describe how you'll organize your code. What is the process and
-> supervision structure? If it uses a framework, how does it fit in. I
-> just need to understand the direction you plan to take. Again, three
-> or four sentences are probably enough.
-
-
-
-> replace all the ">" lines with your content, then push this to
-> gitlab and issue a merge request.
