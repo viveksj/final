@@ -18,4 +18,4 @@ I'll try to have the OAuth built in, so that Users can sign up using Facebook/Tw
 
 I have not figured out how, but I would like to save user purchase history data after signing up. And I'll have supervisor monitoring different modules in the application.
 
-I haven't yet decided the supervision structure and the restart strategy, but that will be ready soon(hopefully).
+I haven't yet decided the supervision structure and the restart strategy, but that will be ready soon(hopefully)
