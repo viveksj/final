@@ -10,7 +10,7 @@
 
 /* Space out content a bit */
 body, form, ul, table {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 
@@ -27,12 +27,12 @@ form.link, form.button {
   border-bottom: 1px solid #e5e5e5;
 }
 .logo {
-  width: 519px;
-  height: 71px;
+  width: 200px;
+  height: 129px;
   display: inline-block;
   margin-bottom: 1em;
-  background-image: url("/images/phoenix.png");
-  background-size: 519px 71px;
+  background-image: url("/images/watchkart.png");
+  /*background-size: 200px 71px;*/
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -73,7 +73,7 @@ form.link, form.button {
   }
   /* Space out the masthead */
   .header {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {

@@ -14,20 +14,25 @@
   <body>
     <div class="container">
 
-      <!--
+
 
       <header class="header">
         <nav role="navigation">
           <ul class="nav nav-pills pull-right">
-            <li><a href="http://www.phoenixframework.org/docs">Get Started</a></li>
+            <li><a href="/">About Us</a></li>
+            <li><a href="/">View Products</a></li>
+            <li><a href="/">View Cart</a></li>
+            <li><a href="/">My Orders</a></li>
+            <li><a href="/">Contact Us</a></li>
+            <li><a href="/">Login/Register</a></li>
           </ul>
         </nav>
 
         <span class="logo"></span>
 
       </header>
-    -->
-      
+
+
 
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
