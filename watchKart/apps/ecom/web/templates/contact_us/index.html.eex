@@ -1,4 +1,4 @@
 <div class="jumbotron">
-  <h2><%= gettext "Products:" %></h2>
-  <p class="lead">A limited edition watch selling web site.<br> Get 'em while they are cheap.<br /></p>
+  <h2>©WatchKart. All rights reserved</h2>
+  <p class="lead">You can contact us at: contact@watchkart.com<br /></p>
 </div>

@@ -1,4 +1,4 @@
 <div class="jumbotron">
   <h2><%= gettext "Products!" %></h2>
-  <p class="lead">A limited edition watch selling web site.<br> Get 'em while they are cheap.<br /></p>
+  <p class="lead">Displaying soon.<br><br /></p>
 </div>

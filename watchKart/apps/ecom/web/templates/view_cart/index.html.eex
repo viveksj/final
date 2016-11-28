@@ -1,4 +1,4 @@
 <div class="jumbotron">
-  <h2><%= gettext "Carts:" %></h2>
-  <p class="lead">A limited edition watch selling web site.<br> Get 'em while they are cheap.<br /></p>
+  <h2><%= gettext "Your Cart:" %></h2>
+  <p class="lead">Beta Feature.<br> Work in Progress.<br /></p>
 </div>

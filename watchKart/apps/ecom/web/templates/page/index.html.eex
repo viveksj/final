@@ -1,4 +1,6 @@
 <div class="jumbotron">
-  <h2><%= gettext "Products:" %></h2>
-  <p class="lead">A limited edition watch selling web site.<br> Get 'em while they are cheap.<br /></p>
+  <h2><%= gettext "Welcome to WatchKart!" %></h2>
+  <h3>©WatchKart a 2050 Company</h3>
+  <p class="lead">This project started as a personal challenge on November 20, 2016 as a final project for a class that Retired President of Unit</br>Dr. Whivek Sanghvi Jain started! </br></br> Go Purchase these limited edition watches while stocks last and they are still cheap.<br /></p>
+
 </div>
