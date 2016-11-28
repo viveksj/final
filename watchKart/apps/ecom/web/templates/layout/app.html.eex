@@ -11,9 +11,12 @@
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
-  <body>
+  <body background ="<%= static_path(@conn, "/images/bg.jpg") %>">
+    <!-- <img src="<%= static_path(@conn, "/images/bg.jpg") %>"/> -->
+
 
     <div class="container">
+
 
 
 
@@ -24,7 +27,6 @@
             <li><a href="/view_cart">View Cart</a></li>
             <li><a href="/contact_us">Contact Us</a></li>
             <li><a href="/login">Login</a></li>
-            <!--Figure out what to do with Login/Logout<%=#@status%>-->
             <li><a href="/register">Register</a></li>
 
           </ul>
@@ -36,6 +38,7 @@
         <!-- <span class="bg"></span> -->
 
       </header>
+
 
 
 
