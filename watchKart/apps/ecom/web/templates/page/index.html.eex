@@ -3,11 +3,11 @@
   <h2><%= gettext "Welcome %{logged}!",logged: "Log In" %></h2>
   <h3>©WatchKart a 2050 Company</h3>
   <p class="lead">
-    This project started as a personal challenge on November 20,
-    2016 as a final project for a class that Retired President of Unit
-   </br>Dr. Whivek Sanghvi Jain started! </br></br>
-   Go Purchase these limited edition watches while stocks last
-   and they are still cheap.<br />
+    This project was started on November 20,
+    2016 as a personal challenge and as the final project for a class under the tutealge of Prof. Dave Thomas undertaken by Honourable President of Unit
+   </br>Dr. Whivek Sanghvi Jain! </br></br>
+   <h4>Go Purchase these limited edition watches while stocks last
+   and they are still cheap.</h3>
  </p>
 
 </div>
