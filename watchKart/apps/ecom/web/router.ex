@@ -16,7 +16,11 @@ defmodule Ecom.Router do
   scope "/", Ecom do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
+    get "/",               PageController,         :index
+    get "/login",          LoginController,        :index
+    get "/view_products",  ViewProductsController, :index
+    get "/view_cart",      ViewCartController,     :index
+    get "/contact_us",     ContactUsController,    :index
   end
 
   # Other scopes may use custom stacks.

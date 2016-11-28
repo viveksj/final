@@ -19,16 +19,15 @@
       <header class="header">
         <nav role="navigation">
           <ul class="nav nav-pills pull-right">
-            <li><a href="/">About Us</a></li>
-            <li><a href="/">View Products</a></li>
-            <li><a href="/">View Cart</a></li>
-            <li><a href="/">My Orders</a></li>
-            <li><a href="/">Contact Us</a></li>
-            <li><a href="/">Login/Register</a></li>
+            <li><a href="/view_products">View Products</a></li>
+            <li><a href="/view_cart">View Cart</a></li>
+            <li><a href="/contact_us">Contact Us</a></li>
+            <li><a href="/login">Login/Register</a></li>
           </ul>
         </nav>
 
         <span class="logo"></span>
+        <!-- <span class="bg"></span> -->
 
       </header>
 

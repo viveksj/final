@@ -1,0 +1,4 @@
+<div class="jumbotron">
+  <h2><%= gettext "Login Page" %></h2>
+  <p class="lead">Enter Information.<br /></p>
+</div>
