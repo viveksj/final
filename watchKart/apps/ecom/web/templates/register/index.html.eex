@@ -1,0 +1,90 @@
+<div class="jumbotron">
+  <h2><%= gettext "Enter Registeration Info:" %></h2>
+  <!-- <p class="lead">Enter Information:<br /></p> -->
+
+  <!-- <Need to add action parameter info: http://phoenix.thefirehoseproject.com/5.html -->
+  <form method="POST" style="margin-top:30px;" action="/" %>
+      <div class="row">
+        <div class="small-8">
+
+          <div class="row">
+            <div class="small-4 columns">
+              <label for="right-label" class="right inline">First Name</label>
+            </div>
+            <div class="small-8 columns">
+              <input type="text" id="right-label" placeholder="Vivek" name="fname">
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-4 columns">
+              <label for="right-label" class="right inline">Last Name</label>
+            </div>
+            <div class="small-8 columns">
+              <input type="text" id="right-label" placeholder="Jain" name="lname">
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-4 columns">
+              <label for="right-label" class="right inline">Address</label>
+            </div>
+            <div class="small-8 columns">
+              <input type="text" id="right-label"  name="address">
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-4 columns">
+              <label for="right-label" class="right inline">City</label>
+            </div>
+            <div class="small-8 columns">
+              <input type="text" id="right-label" placeholder="Dallas" name="city">
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-4 columns">
+              <label for="right-label" class="right inline">Pin Code</label>
+            </div>
+            <div class="small-8 columns">
+              <input type="number" id="right-label" placeholder="75206" name="pin">
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-4 columns">
+              <label for="right-label" class="right inline">E-Mail</label>
+            </div>
+            <div class="small-8 columns">
+              <input type="email" id="right-label" placeholder="vivek@watchkart.com" name="email">
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-4 columns">
+              <label for="right-label" class="right inline">Password</label>
+            </div>
+            <div class="small-8 columns">
+              <input type="password" id="right-label" name="pwd">
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-4 columns">
+
+            </div>
+            <div class="small-8 columns">
+              <input type="submit" id="right-label" value="Register" style="background: #D0A226; border: none; color: #fff; font-family: 'Helvetica Neue', sans-serif; font-size: 1em; padding: 10px; border-radius: 50px;">
+              <input type="reset" id="right-label" value="Reset" style="background: #D0A226; border: none; color: #fff; font-family: 'Helvetica Neue', sans-serif; font-size: 1em; padding: 10px; border-radius: 50px;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+
+    <div class="row" style="margin-top:10px;">
+      <div class="small-12">
+
+        <footer>
+           <p style="text-align:center; font-size:0.8em;">&copy; WatchKart. All Rights Reserved.</p>
+        </footer>
+
+      </div>
+    </div>
+
+</div>

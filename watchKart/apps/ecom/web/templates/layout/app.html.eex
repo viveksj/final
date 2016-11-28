@@ -12,6 +12,7 @@
   </head>
 
   <body>
+
     <div class="container">
 
 
@@ -22,11 +23,16 @@
             <li><a href="/view_products">View Products</a></li>
             <li><a href="/view_cart">View Cart</a></li>
             <li><a href="/contact_us">Contact Us</a></li>
-            <li><a href="/login">Login/Register</a></li>
+            <li><a href="/login">Login</a></li>
+            <!--Figure out what to do with Login/Logout<%=#@status%>-->
+            <li><a href="/register">Register</a></li>
+
           </ul>
         </nav>
 
-        <span class="logo"></span>
+
+        <a href="/"><span class="logo"></span></a>
+
         <!-- <span class="bg"></span> -->
 
       </header>
