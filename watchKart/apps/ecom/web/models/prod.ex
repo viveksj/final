@@ -8,8 +8,6 @@ defmodule Ecom.Prod do
     field :product_img_name, :string
     field :product_quantity, :integer
     field :price, :string
-
-    timestamps()
   end
 
   @doc """

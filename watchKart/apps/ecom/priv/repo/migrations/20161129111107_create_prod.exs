@@ -9,8 +9,6 @@ defmodule Ecom.Repo.Migrations.CreateProd do
       add :product_img_name, :text
       add :product_quantity, :integer
       add :price, :text
-
-      timestamps()
     end
 
   end
