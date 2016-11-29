@@ -1,4 +1,4 @@
-<h2>Show prod</h2>
+<!-- <h2>Show prod</h2>
 
 <ul>
 
@@ -35,4 +35,4 @@
 </ul>
 
 <%= link "Edit", to: prod_path(@conn, :edit, @prod) %>
-<%= link "Back", to: prod_path(@conn, :index) %>
+<%= link "Back", to: prod_path(@conn, :index) %> -->

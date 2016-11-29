@@ -7,7 +7,7 @@
       <th>Product name</th>
       <th>Product desc</th>
       <th>Product img name</th>
-      <th>Product quantity</th>
+      <th>Product quantity left</th>
       <th>Price</th>
 
       <th></th>
@@ -24,13 +24,16 @@
       <td><%= prod.price %></td>
 
       <td class="text-right">
-        <%= link "Show", to: prod_path(@conn, :show, prod), class: "btn btn-default btn-xs" %>
-        <%= link "Edit", to: prod_path(@conn, :edit, prod), class: "btn btn-default btn-xs" %>
-        <%= link "Delete", to: prod_path(@conn, :delete, prod), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+         <%= link "Show", to: prod_path(@conn, :show, prod), class: "btn btn-default btn-xs" %>
+        <!--<%= link "Edit", to: prod_path(@conn, :edit, prod), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: prod_path(@conn, :delete, prod), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %> -->
+        <!-- <%=# link "Purchase", to: prod_path(@conn, :purchase, prod), method: :purchase, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %> -->
       </td>
     </tr>
 <% end %>
   </tbody>
 </table>
 
-<%= link "New prod", to: prod_path(@conn, :new) %>
+
+<!-- Below feature for Admin Only. | Future feature: Admin will have page to directly type in metadata and upload photos: -->
+<%=# link "New prod", to: prod_path(@conn, :new) %>

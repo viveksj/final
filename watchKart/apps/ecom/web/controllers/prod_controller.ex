@@ -36,6 +36,9 @@ defmodule Ecom.ProdController do
     changeset = Prod.changeset(prod)
     render(conn, "edit.html", prod: prod, changeset: changeset)
   end
+  # def purchase(conn, %{"id" => id}) do
+  #   render(conn, "/", prod: prod, changeset: changeset)
+  # end
 
   def update(conn, %{"id" => id, "prod" => prod_params}) do
     prod = Repo.get!(Prod, id)
