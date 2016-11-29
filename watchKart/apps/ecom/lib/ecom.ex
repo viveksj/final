@@ -24,8 +24,8 @@
     :ok
   end
 
-  # defdelegate set(k, v), to: Ecom.CostIncrementar
-  # defdelegate get(k), to: Ecom.CostIncrementar
-  # defdelegate clear, to: Ecom.CostIncrementar
-
+  # defdelegate set(k, v), to: Kvp.Worker
+  # defdelegate get(k), to: Kvp.Worker
+  # defdelegate clear, to: Kvp.Worker
+  #
 end
