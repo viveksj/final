@@ -20,7 +20,7 @@ defmodule CostIncrementar.Mixfile do
   def application do
     [
       applications: [:logger]
-      mod:         {:cost_incrementar, []}
+      #mode:         {:cost_incrementar, []}
 
     ]
 

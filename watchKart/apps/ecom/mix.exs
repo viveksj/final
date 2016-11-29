@@ -44,7 +44,7 @@ defmodule Ecom.Mixfile do
      {:cowboy, "~> 1.0"},
      {:cost_incrementar, in_umbrella: true}]
 
-    
+
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
