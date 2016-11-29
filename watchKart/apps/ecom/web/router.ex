@@ -24,9 +24,12 @@ defmodule Ecom.Router do
     get "/contact_us",     ContactUsController,    :index
     get "/register",       RegisterController,     :index
 
-
   end
 
+    scope "/", Ecom do
+      pipe_through :browser # Use the default browser stack
+      resources "/products", ProdController
+    end
 
 
 

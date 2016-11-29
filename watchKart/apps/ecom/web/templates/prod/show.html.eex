@@ -1,0 +1,38 @@
+<h2>Show prod</h2>
+
+<ul>
+
+  <li>
+    <strong>Pid:</strong>
+    <%= @prod.pid %>
+  </li>
+
+  <li>
+    <strong>Product name:</strong>
+    <%= @prod.product_name %>
+  </li>
+
+  <li>
+    <strong>Product desc:</strong>
+    <%= @prod.product_desc %>
+  </li>
+
+  <li>
+    <strong>Product img name:</strong>
+    <%= @prod.product_img_name %>
+  </li>
+
+  <li>
+    <strong>Product quantity:</strong>
+    <%= @prod.product_quantity %>
+  </li>
+
+  <li>
+    <strong>Price:</strong>
+    <%= @prod.price %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: prod_path(@conn, :edit, @prod) %>
+<%= link "Back", to: prod_path(@conn, :index) %>

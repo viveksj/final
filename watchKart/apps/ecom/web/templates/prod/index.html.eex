@@ -1,0 +1,36 @@
+<h2>Listing products</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Pid</th>
+      <th>Product name</th>
+      <th>Product desc</th>
+      <th>Product img name</th>
+      <th>Product quantity</th>
+      <th>Price</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for prod <- @products do %>
+    <tr>
+      <td><%= prod.pid %></td>
+      <td><%= prod.product_name %></td>
+      <td><%= prod.product_desc %></td>
+      <td><%= prod.product_img_name %></td>
+      <td><%= prod.product_quantity %></td>
+      <td><%= prod.price %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: prod_path(@conn, :show, prod), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: prod_path(@conn, :edit, prod), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: prod_path(@conn, :delete, prod), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New prod", to: prod_path(@conn, :new) %>

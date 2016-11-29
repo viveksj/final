@@ -23,7 +23,7 @@
       <header class="header">
         <nav role="navigation">
           <ul class="nav nav-pills pull-right">
-            <li><a href="/view_products">View Products</a></li>
+            <li><a href="/products">View Products</a></li>
             <li><a href="/view_cart">View Cart</a></li>
             <li><a href="/contact_us">Contact Us</a></li>
             <li><a href="/login">Login</a></li>
