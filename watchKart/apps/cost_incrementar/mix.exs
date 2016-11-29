@@ -19,8 +19,8 @@ defmodule CostIncrementar.Mixfile do
   # Type "mix help compile.app" for more information
   def application do
     [
-      applications: [:logger]
-      #mode:         {:cost_incrementar, []}
+      applications: [:logger],
+      mod:          {:cost_incrementar, []}
 
     ]
 
