@@ -23,4 +23,9 @@
     Ecom.Endpoint.config_change(changed, removed)
     :ok
   end
+
+  # defdelegate set(k, v), to: Ecom.CostIncrementar
+  # defdelegate get(k), to: Ecom.CostIncrementar
+  # defdelegate clear, to: Ecom.CostIncrementar
+
 end

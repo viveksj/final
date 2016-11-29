@@ -1,8 +1,8 @@
 defmodule Ecom.CostIncrementar do
-
 #this can be done as a 2nd app in the umbrell aproject
 
 use GenServer
+alias Ecom.CostIncrementar
 
 @me __MODULE__
 ##################
@@ -10,57 +10,44 @@ use GenServer
 ##################
 
 def start_link(default \\ []) do
-  GenServer.start_link(__MODULE__, default, name: @me)
+  {:ok, _pid} = GenServer.start_link(@me, default, name: @me)
 end
 
-#I dont know what exactly defualt is. But start_link should give rise to initial state
-
-
-def set(p_id,id,product_quantity,p_qty,price,p_price) do
-  GenServer.cast(@me,{:set, p_id,id,product_quantity,p_qty,price,p_price})
+def set(key, value) do
+    {fv,_} = Float.parse(value)
+     v = Float.round(fv*1.1)
+    :ok = GenServer.cast(@me,{:set, key, v})
 end
 
-def get(p_id,product_quantity,price) do
-  GenServer.call(@me,{:get, p_id,product_quantity,price})
+def get(key) do
+  GenServer.call(@me,{:get, key})
 end
-
-#Dont need get function for my application. As we only use the GenServer to increment the cose and decrement the product quantity
-#But need it initially to display the result
 
 ####################################
 #       Implementation      #
 ####################################
 
-
 def init(args) do
-{:ok,
-Enum.into(args, %{})
+{:ok, %{}}
+end
+
+def clear do
+    :ok = GenServer.cast(@me, :clear)
+end
+
+def handle_cast({:set,key,value},state) do
+{
+    :noreply, Map.put(state,key,value)
 }
 end
 
-def handle_cast({:set, p_id,id,product_quantity,p_qty,price,p_price},state) do
-  {:noreply,
-  # Map.put(state,p_id,id)
+def handle_cast(:clear, _state) do
+    {:noreply, %{}}
+  end
 
-  Map.put(state,p_id,id),
-  Map.put(state,product_quantity,p_qty),
-  Map.put(state,price,p_price)
-
-  # state
-  # |> Map.put(p_id,id)
-  # |> Map.put(product_quantity,p_qty)
-  # |> Map.put(price,p_price)
-
-
-  #Implement Logic here to convert the price and quantity into number from string and they increment price by 10% and decrement quantity by 1
-}
+def handle_call({:get,key},_from, state) do
+  {:reply, state[key], state}
 end
-
-def handle_call({:get, p_id,product_quantity,price},_from, state) do
-  {:noreply, state[p_id],state[product_quantity],state[price], state}
-end
-
-
 
 end
 
