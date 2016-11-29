@@ -1,6 +1,5 @@
 defmodule Ecom.CostIncrementar do
 #this can be done as a 2nd app in the umbrell aproject
-
 use GenServer
 alias Ecom.CostIncrementar
 
@@ -13,15 +12,24 @@ def start_link(default \\ []) do
   {:ok, _pid} = GenServer.start_link(@me, default, name: @me)
 end
 
-def set(key, value) do
-    {fv,_} = Float.parse(value)
-     v = Float.round(fv*1.1)
-    :ok = GenServer.cast(@me,{:set, key, v})
+def set("price", price_value) do
+    :ok = GenServer.cast(@me,{:set, "price", price_value})
 end
 
-def get(key) do
-  GenServer.call(@me,{:get, key})
+def get("price") do
+  GenServer.call(@me,{:get, "price"})
 end
+
+
+def set("product_quantity", qvalue) do
+    :ok = GenServer.cast(@me,{:set, "product_quantity", qvalue})
+end
+
+def get("product_quantity") do
+  GenServer.call(@me,{:get, "product_quantity"})
+end
+
+
 
 ####################################
 #       Implementation      #
@@ -31,26 +39,36 @@ def init(args) do
 {:ok, %{}}
 end
 
-def clear do
-    :ok = GenServer.cast(@me, :clear)
+
+def handle_cast({:set,"price",price_value},state) do
+  {v,_} = Float.parse(price_value)
+   fv = Float.round((v*1.1),2)
+  {  :noreply, Map.put(state,"price",fv)}
 end
 
-def handle_cast({:set,key,value},state) do
-{
-    :noreply, Map.put(state,key,value)
-}
+def handle_call({:get,"price"},_from, state) do
+  {:reply, state["price"], state}
 end
 
-def handle_cast(:clear, _state) do
-    {:noreply, %{}}
-  end
 
-def handle_call({:get,key},_from, state) do
-  {:reply, state[key], state}
+
+def handle_cast({:set,"product_quantity",qvalue},state) do
+  q=qvalue-1
+  {  :noreply, Map.put(state,"product_quantity",q)}
 end
 
+
+def handle_call({:get,"product_quantity"},_from, state) do
+  {:reply, state["product_quantity"], state}
 end
 
-#Call this using GenServer.start(CostIncrementar, [])
-#iex -S mix
+
+end
+
+
 #r CostIncrementar
+# alias Ecom.CostIncrementar, as: CI
+# CI.set("price", "1024")
+# CI.get("price")
+# CI.set("product_quantity", "14")
+# CI.get("product_quantity")
