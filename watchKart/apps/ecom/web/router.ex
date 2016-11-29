@@ -23,9 +23,13 @@ defmodule Ecom.Router do
     get "/view_cart",      ViewCartController,     :index
     get "/contact_us",     ContactUsController,    :index
     get "/register",       RegisterController,     :index
-    post "/register",       RegisterController,     :create
+
 
   end
+
+
+
+
 
   # Other scopes may use custom stacks.
   # scope "/api", Ecom do

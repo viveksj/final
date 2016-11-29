@@ -1,2 +1,0 @@
-defmodule CostIncrementar do
-end
