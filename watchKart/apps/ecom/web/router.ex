@@ -18,17 +18,26 @@ defmodule Ecom.Router do
 
     get "/",               PageController,         :index
     get "/login",          LoginController,        :index
-    post "/login/",        LoginController,        :index
-    get "/view_products",  ViewProductsController, :index
     get "/view_cart",      ViewCartController,     :index
     get "/contact_us",     ContactUsController,    :index
     get "/register",       RegisterController,     :index
+    post "/login/",        LoginController,        :index
 
   end
 
     scope "/", Ecom do
       pipe_through :browser # Use the default browser stack
       resources "/products", ProdController
+
+      put "/products/:id/edit",       ProdController,     :purchase
+
+end
+
+      scope "/", Ecom do
+        pipe_through :browser # Use the default browser stack
+      resources "/regist", RegController
+
+
     end
 
 

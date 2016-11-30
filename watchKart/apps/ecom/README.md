@@ -18,3 +18,15 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
   * Docs: https://hexdocs.pm/phoenix
   * Mailing list: http://groups.google.com/group/phoenix-talk
   * Source: https://github.com/phoenixframework/phoenix
+
+
+To check the GenServer functionality: Enter the following commands in a terminal in the Directory: FinalProject/final/watchKart/apps/ecom 
+
+   iex -S mix  
+   alias Ecom.CostIncrementar, as: CI
+   CI.set("price", "5124")
+   CI.get("price")
+   CI.set("product_quantity", 14)
+   CI.get("product_quantity")
+
+   #r CostIncrementar

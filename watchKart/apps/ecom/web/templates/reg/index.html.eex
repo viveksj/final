@@ -1,0 +1,38 @@
+<h2>Enter Registration Information</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Pin code</th>
+      <th>Email add</th>
+      <th>Pass</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for reg <- @regist do %>
+    <tr>
+      <td><%= reg.first_name %></td>
+      <td><%= reg.last_name %></td>
+      <td><%= reg.address %></td>
+      <td><%= reg.city %></td>
+      <td><%= reg.pin_code %></td>
+      <td><%= reg.email_add %></td>
+      <td><%= reg.pass %></td>
+
+      <td class="text-right">
+        <!-- <%=# link "Show", to: reg_path(@conn, :show, reg), class: "btn btn-default btn-xs" %> -->
+        <%=# link "Edit", to: reg_path(@conn, :edit, reg), class: "btn btn-default btn-xs" %>
+        <%=# link "Delete", to: reg_path(@conn, :delete, reg), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New reg", to: reg_path(@conn, :new) %>

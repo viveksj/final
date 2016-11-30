@@ -1,0 +1,53 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= label f, :first_name, class: "control-label" %>
+    <%= textarea f, :first_name, class: "form-control" %>
+    <%= error_tag f, :first_name %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :last_name, class: "control-label" %>
+    <%= textarea f, :last_name, class: "form-control" %>
+    <%= error_tag f, :last_name %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :address, class: "control-label" %>
+    <%= textarea f, :address, class: "form-control" %>
+    <%= error_tag f, :address %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :city, class: "control-label" %>
+    <%= textarea f, :city, class: "form-control" %>
+    <%= error_tag f, :city %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :pin_code, class: "control-label" %>
+    <%= textarea f, :pin_code, class: "form-control" %>
+    <%= error_tag f, :pin_code %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :email_add, class: "control-label" %>
+    <%= textarea f, :email_add, class: "form-control" %>
+    <%= error_tag f, :email_add %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :pass, class: "control-label" %>
+    <%= textarea f, :pass, class: "form-control" %>
+    <%= error_tag f, :pass %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>

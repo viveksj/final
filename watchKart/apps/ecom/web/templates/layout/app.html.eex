@@ -9,6 +9,8 @@
 
     <title>Hello Ecom!</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <!-- <link rel="stylesheet" href="<%= static_path(@conn, "/css/foundation.css") %>"> -->
+
   </head>
 
   <body background ="<%= static_path(@conn, "/images/bg.jpg") %>">

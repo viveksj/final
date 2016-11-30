@@ -1,11 +1,6 @@
-<!-- <h2>Show prod</h2>
+<h2>Click on the following button to confirm the purchase!</h2>
 
 <ul>
-
-  <li>
-    <strong>Pid:</strong>
-    <%= @prod.pid %>
-  </li>
 
   <li>
     <strong>Product name:</strong>
@@ -18,21 +13,23 @@
   </li>
 
   <li>
-    <strong>Product img name:</strong>
-    <%= @prod.product_img_name %>
-  </li>
-
-  <li>
-    <strong>Product quantity:</strong>
-    <%= @prod.product_quantity %>
-  </li>
-
-  <li>
     <strong>Price:</strong>
     <%= @prod.price %>
   </li>
 
+
+
+  <li>
+    <strong>Product Image:</strong>
+    <!-- <%= imgname=Enum.join(["/images/",@prod.product_img_name,"/"])%> -->
+<div class="container"><img src="<%= static_path(@conn, imgname) %>"/></div>
+
+
+  </li>
+
+
+
 </ul>
 
-<%= link "Edit", to: prod_path(@conn, :edit, @prod) %>
-<%= link "Back", to: prod_path(@conn, :index) %> -->
+<%=# link "Edit", to: prod_path(@conn, :edit, @prod) %>
+<%= link "Back", to: prod_path(@conn, :index) %>

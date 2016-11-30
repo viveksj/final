@@ -3,13 +3,20 @@ defmodule Ecom.CostIncrementar do
 use GenServer
 alias Ecom.CostIncrementar
 
+
 @me __MODULE__
 ##################
 #       API      #
 ##################
 
 def start_link(default \\ []) do
-  {:ok, _pid} = GenServer.start_link(@me, default, name: @me)
+  GenServer.start_link(@me, default, name: @me)
+  #  caller(default)
+end
+
+def caller(params) do
+    set("price", params["price"])
+    set("product_quantity", params["product_quantity"])
 end
 
 def set("price", price_value) do
@@ -43,6 +50,7 @@ end
 def handle_cast({:set,"price",price_value},state) do
   {v,_} = Float.parse(price_value)
    fv = Float.round((v*1.1),2)
+
   {  :noreply, Map.put(state,"price",fv)}
 end
 

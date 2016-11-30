@@ -1,0 +1,43 @@
+<h2>Show reg</h2>
+
+<ul>
+
+  <li>
+    <strong>First name:</strong>
+    <%= @reg.first_name %>
+  </li>
+
+  <li>
+    <strong>Last name:</strong>
+    <%= @reg.last_name %>
+  </li>
+
+  <li>
+    <strong>Address:</strong>
+    <%= @reg.address %>
+  </li>
+
+  <li>
+    <strong>City:</strong>
+    <%= @reg.city %>
+  </li>
+
+  <li>
+    <strong>Pin code:</strong>
+    <%= @reg.pin_code %>
+  </li>
+
+  <li>
+    <strong>Email add:</strong>
+    <%= @reg.email_add %>
+  </li>
+
+  <li>
+    <strong>Pass:</strong>
+    <%= @reg.pass %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: reg_path(@conn, :edit, @reg) %>
+<%= link "Back", to: reg_path(@conn, :index) %>

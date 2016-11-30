@@ -1,3 +1,4 @@
+<font color= #fff>
 <h2>Listing products</h2>
 
 <table class="table">
@@ -9,6 +10,7 @@
       <th>Product img name</th>
       <th>Product quantity left</th>
       <th>Price</th>
+      <th>Purchase</th>
 
       <th></th>
     </tr>
@@ -20,15 +22,17 @@
       <td><%= prod.pid %></td>
       <td><%= prod.product_name %></td>
       <td><%= prod.product_desc %></td>
-      <td><%= prod.product_img_name %></td>
-      <td><%= prod.product_quantity %></td>
-      <td><%= prod.price %></td>
+      <!-- <%= imgname=Enum.join(["/images/",prod.product_img_name,"/"])%> -->
+      <td><div class="ProductImage"><img src="<%= static_path(@conn, imgname) %>"/></div></td>
+      <td>       <%= prod.product_quantity %></td>
+      <td>$<%= prod.price %></td>
 
       <td class="text-right">
-         <%= link "Show", to: prod_path(@conn, :show, prod), class: "btn btn-default btn-xs" %>
-        <!--<%= link "Edit", to: prod_path(@conn, :edit, prod), class: "btn btn-default btn-xs" %>
+        <!-- <%=# link "Purchase", to: prod_path(@conn, :show, prod),moethod: :post, data: [prod.pid,prod.product_quantity,prod.price], class: "btn btn-default btn-xs" %> -->
+         <%= link "Purchase", to: prod_path(@conn, :edit, prod), class: "btn btn-default btn-xs" %>
+        <!--<%=# link "Edit", to: prod_path(@conn, :edit, prod), class: "btn btn-default btn-xs" %>
         <%= link "Delete", to: prod_path(@conn, :delete, prod), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %> -->
-        <!-- <%=# link "Purchase", to: prod_path(@conn, :purchase, prod), method: :purchase, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %> -->
+
       </td>
     </tr>
 <% end %>
@@ -38,3 +42,4 @@
 
 <!-- Below feature for Admin Only. | Future feature: Admin will have page to directly type in metadata and upload photos: -->
 <%=# link "New prod", to: prod_path(@conn, :new) %>
+</font>

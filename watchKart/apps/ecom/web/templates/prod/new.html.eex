@@ -1,6 +1,6 @@
-<!-- <h2>New prod</h2>
+<h2>New prod</h2>
 
 <%= render "form.html", changeset: @changeset,
                         action: prod_path(@conn, :create) %>
 
-<%= link "Back", to: prod_path(@conn, :index) %> -->
+<%= link "Back", to: prod_path(@conn, :index) %>

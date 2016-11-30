@@ -29,7 +29,18 @@ defmodule Ecom.ProdController do
   def show(conn, %{"id" => id}) do
     prod = Repo.get!(Prod, id)
     render(conn, "show.html", prod: prod)
+
   end
+
+  def purchase(conn, params) do
+    Ecom.CostIncrementar.start_link(params)
+    id = params["id"]
+    prod = Repo.get!(Prod, id)
+    changeset = Prod.changeset(prod)
+    render(conn, "edit.html", prod: prod, changeset: changeset)
+
+  end
+
 
   def edit(conn, %{"id" => id}) do
     prod = Repo.get!(Prod, id)

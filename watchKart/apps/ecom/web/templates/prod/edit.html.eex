@@ -1,6 +1,46 @@
-<h2>Edit prod</h2>
+<h2>Click on the following button to confirm the purchase!</h2>
 
 <%= render "form.html", changeset: @changeset,
-                        action: prod_path(@conn, :update, @prod) %>
+                        action: prod_path(@conn, :edit, @prod) %>
 
 <%= link "Back", to: prod_path(@conn, :index) %>
+
+
+
+
+
+
+
+<ul>
+
+  <li>
+    <strong>Product name:</strong>
+    <%= @prod.product_name %>
+  </li>
+
+  <li>
+    <strong>Product desc:</strong>
+    <%= @prod.product_desc %>
+  </li>
+
+  <li>
+    <strong>Price:</strong>
+    <%= @prod.price %>
+  </li>
+
+
+
+
+
+    <!-- <%= imgname=Enum.join(["/images/",@prod.product_img_name,"/"])%> -->
+<div class="container"><img src="<%= static_path(@conn, imgname) %>"/></div>
+
+
+  
+
+
+
+</ul>
+
+<%=# link "Edit", to: prod_path(@conn, :edit, @prod) %>
+<%=# link "Back", to: prod_path(@conn, :index) %>
